@@ -1,1 +1,1 @@
-# catadoption
+# cat-adoption
