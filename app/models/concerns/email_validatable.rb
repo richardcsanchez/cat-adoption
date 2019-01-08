@@ -8,7 +8,7 @@ module EmailValidatable
       begin
         a = Mail::Address.new(value)
       rescue Mail::Field::ParseError
-        record.errors[attribute] << (options[:message] || "is not a valid email")
+        record.errors[attribute] << (options[:message] || "isn't a valid email")
       end
     end
   end
