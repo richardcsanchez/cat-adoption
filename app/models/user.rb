@@ -3,8 +3,11 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :money, presence: true
   validates :admin, presence: true
+
+  include EmailValidatable
   validates :email, presence: true
   validates :email, uniqueness: true
+  validates :email, email: true
 
 
 
