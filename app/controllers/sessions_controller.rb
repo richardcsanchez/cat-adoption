@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   skip_before_action :require_logged_in, only: [:new, :create]
 
   def new
+    @user = User.find_by(params[:email])
   end
 
   def create
@@ -9,8 +10,7 @@ class SessionsController < ApplicationController
     user = user.try(:authenticate, params[:user][:password])
     return redirect_to(controller: 'sessions', action: 'new') unless user
     session[:user_id] = user.id
-    @user = user
-    redirect_to controller: 'welcome', action: 'home'
+    redirect_to user_path(user)
   end
 
   def destroy
