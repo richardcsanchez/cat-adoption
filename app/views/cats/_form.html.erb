@@ -1,41 +1,36 @@
-<%= form_for @user do |f|%>
+<%= form_for @cat do |f|%>
 
-<%=f.label 'name'%> <br>
+<%=f.label 'name'%>: <br>
 <%=f.text_field :name %> <br>
 <br>
-<%=f.label 'breed'%> <br>
+<%=f.label 'breed'%>: <br>
 <%=f.text_field :breed %> <br>
 <br>
-<%=f.label 'age'%> <br>
-$<%=f.text_field :age %> <br>
+<%=f.label 'age'%>: <br>
+<%=f.text_field :age %> <br>
 <br>
-<%=f.label 'sex'%> <br>
+<%=f.label 'sex'%>: <br>
 <%=f.text_field :sex %> <br>
 <br>
-<%= f.label :disposition %>
+<%= f.label :disposition %>:<br>
 <%= f.text_field :disposition%><br>
 <br>
-<%= f.label :cost, "Cost to Adopt" %>
-<%= f.text_field :cost%><br>
+<%= f.label :cost, "Cost to Adopt" %>:<br>
+$<%= f.text_field :cost%><br>
 <br>
-<%= f.label :adopted, "Adopted?" %>
-<%= f.check_box :adopted, class: "form-check-input" %><br>
+<%= f.label :adopted, "Adopted?" %><br>
+<%= f.check_box :adopted, class: "form-check-input" %>Yes<br>
 <br>
-<%= f.label :neutered, "Check if spayed/neutered:" %>
-<%= f.check_box :neutered, class: "form-check-input" %><br>
+<%= f.label :neutered, "Spayed/Neutered?" %><br>
+<%= f.check_box :neutered, class: "form-check-input" %>Yes<br>
 <br>
-<%=f.label 'image_link'%> <br>
-<%=f.text_field :image_link %> <br>
+<%=f.label 'image', "Image Link"%>: <br>
+<%=f.text_field :image %> <br>
 <br>
-<%=f.label 'agency', "Adoption Agency"%> <br>
-<%=f.text_field :image_link %> <br>
+<%=f.label 'agency_id', "Adoption Agency"%>: <br>
+<%=f.text_field :agency_id %> <br>
 <br>
 <%= f.submit "Submit" %>
 <%end%>
 
-
-
-
-<%= f.submit "Submit" %>
-<%end%>
 <br>
