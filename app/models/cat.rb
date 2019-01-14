@@ -1,8 +1,8 @@
 class Cat < ApplicationRecord
   belongs_to :agency
-  # belongs_to :user
+  belongs_to :user
 
-  validates :name, :breed, :age, :sex, :agency_id, presence: :true
+  validates :name, :breed, :disposition, :age, :sex, :agency_id, presence: :true
   # validates :owner_id, presence: true, if: :adopted?
 
   def adopted?

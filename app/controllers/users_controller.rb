@@ -16,7 +16,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    redirect_to_current_user
   end
 
   def edit
