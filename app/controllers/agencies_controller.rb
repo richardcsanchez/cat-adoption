@@ -17,10 +17,20 @@ class AgenciesController < ApplicationController
   end
 
   def edit
+    @agency = Agency.find_by_id(params[:id])
   end
 
   def index
     @agencies = Agency.all
+  end
+
+  def update
+    @agency = Agency.find_by_id(params[:id])
+    if @agency.update(agency_params)
+      redirect_to @agency
+    else
+      render :edit
+    end
   end
 
   private

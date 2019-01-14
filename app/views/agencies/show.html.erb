@@ -1,1 +1,14 @@
 <h1><%= @agency.name %></h1>
+<h4><%= @agency.email%></h4>
+<h4><%= @agency.phone_number%></h4>
+
+<p>
+  <%=@agency.street_1%><br>
+  <%=@agency.street_2%>
+  <%=@agency.city%>
+  <%=@agency.state%>
+  <%=@agency.zip_code%>
+</p>
+<br>
+<br>
+<%= link_to 'Edit', edit_agency_path(@agency)%>
