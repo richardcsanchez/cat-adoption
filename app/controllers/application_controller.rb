@@ -12,6 +12,12 @@ class ApplicationController < ActionController::Base
     redirect_to root_path unless logged_in?
   end
 
+  def redirect_to_current_user
+    @user = User.find_by_id(session[:user_id])
+      redirect_to user_path(@user)
+    end
+
+
   def current_user
     @user = User.find_by_id(session[:user_id])
   end
