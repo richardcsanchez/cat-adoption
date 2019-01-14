@@ -16,6 +16,13 @@ class AgenciesController < ApplicationController
     @agency = Agency.find_by_id(params[:id])
   end
 
+  def edit
+  end
+
+  def index
+    @agencies = Agency.all
+  end
+
   private
   def agency_params
    params.require(:agency).permit(:name, :street_1, :street_2, :zip_code, :state, :email, :phone_number)

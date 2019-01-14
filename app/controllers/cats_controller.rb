@@ -9,6 +9,7 @@ class CatsController < ApplicationController
   end
 
   def create
+    raise params.inspect
     @cat = Cat.new(cat_params)
      if @cat.save
        redirect_to cat_path(@cat)
@@ -18,6 +19,7 @@ class CatsController < ApplicationController
   end
 
   def show
+    @cat = Cat.find_by_id(params[:id])
   end
 
   private
