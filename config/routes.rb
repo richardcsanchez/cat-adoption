@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   post "/signin", to: "sessions#create"
   get "/signout", to: "sessions#destroy"
   post "/cats", to: "cats#create"
+  delete "/cats", to: "cats#destroy"
 
   resources :cats
   resources :agencies
