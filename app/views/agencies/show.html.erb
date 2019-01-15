@@ -1,6 +1,6 @@
 <h1><%= @agency.name %></h1>
 <h4><%= @agency.email%></h4>
-<h4><%= @agency.phone_number%></h4>
+<h4><%= number_to_phone(@agency.phone_number)%></h4>
 
 <p>
   <%=@agency.street_1%><br>
@@ -10,5 +10,9 @@
   <%=@agency.zip_code%>
 </p>
 <br>
-<br>
+<%if current_user.admin?%>
 <%= link_to 'Edit', edit_agency_path(@agency)%>
+<%end%>
+<br>
+<br>
+<%= link_to 'All Agencies', agencies_path%>
