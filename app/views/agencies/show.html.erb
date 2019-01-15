@@ -13,7 +13,7 @@
 <h4>Cats at this Agency:
   <%@agency.cats.each do |cat|%>
     <ul>
-      <%=link_to cat.name, agency_cat_path(cat.agency.id, cat.id)%>
+      <%=link_to cat.name, agency_cat_path(cat.agency, cat)%>
     </ul>
   <%end%>
 
