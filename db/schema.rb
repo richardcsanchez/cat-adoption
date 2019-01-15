@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2019_01_08_192636) do
     t.string "disposition"
     t.integer "cost"
     t.boolean "adopted"
-    t.integer "owner_id"
+    t.integer "user_id"
     t.boolean "neutered"
     t.string "image"
     t.integer "agency_id"
