@@ -9,7 +9,16 @@
   <%=@agency.state%>
   <%=@agency.zip_code%>
 </p>
-<br>
+
+<h4>Cats at this Agency:
+  <%@agency.cats.each do |cat|%>
+    <ul>
+      <%if cat.adopted? == false%>
+      <%=link_to cat.name, cat_path%>
+      <%end%>
+    </ul>
+  <%end%>
+
 <%if current_user.admin?%>
 <%= link_to 'Edit', edit_agency_path(@agency)%>
 <%end%>
