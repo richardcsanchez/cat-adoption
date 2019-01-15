@@ -13,7 +13,7 @@ class AgenciesController < ApplicationController
   end
 
   def show
-    @agency = Agency.find_by_id(params[:id])
+    @agency = Agency.find(params[:id])
   end
 
   def edit

@@ -1,7 +1,11 @@
 class CatsController < ApplicationController
 
   def index
+    if params[:agency_id]
+      @posts = agency.find(params[:agency_id]).cats
+    else
     @cats = Cat.all
+  end
   end
 
   def new
@@ -19,7 +23,7 @@ class CatsController < ApplicationController
   end
 
   def show
-    @cat = Cat.find_by_id(params[:id])
+    @cat = Cat.find(params[:id])
   end
 
   def edit

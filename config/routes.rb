@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   delete "/cats", to: "cats#destroy"
 
   resources :cats
-  resources :agencies
+
+  resources :agencies do
+    resources :cats, only: [:show, :index]
+  end
+
   resources :users
 
   root "welcome#home"

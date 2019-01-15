@@ -13,9 +13,7 @@
 <h4>Cats at this Agency:
   <%@agency.cats.each do |cat|%>
     <ul>
-      <%if cat.adopted? == false%>
-      <%=link_to cat.name, cat_path(cat)%>
-      <%end%>
+      <%=link_to cat.name, agency_cat_path(cat)%>
     </ul>
   <%end%>
 
