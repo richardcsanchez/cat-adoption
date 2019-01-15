@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
       @user = User.find_by(params[:email])
     if @user == nil
       redirect_to root_path
-  end
+    end
   end
 
   def create

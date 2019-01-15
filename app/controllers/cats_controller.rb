@@ -9,7 +9,6 @@ class CatsController < ApplicationController
   end
 
   def create
-    raise params.inspect
     @cat = Cat.new(cat_params)
      if @cat.save
        redirect_to cat_path(@cat)
