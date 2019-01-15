@@ -19,12 +19,12 @@
 $<%= f.text_field :cost%><br>
 <br>
 <%= f.label :neutered, "Spayed/Neutered?" %><br>
-<%= f.check_box :neutered, class: "form-check-input" %>Yes<br>
+<%= f.check_box :neutered%> <br>
 <br>
 <%=f.label 'image', "Image Link"%>: <br>
 <%=f.text_field :image %> <br>
 <br>
-<%=f.label 'agency_id', "Adoption Agency"%>: <br>
+<%=f.label 'agency_id.name', "Adoption Agency"%>: <br>
 <%=f.text_field :agency_id %> <br>
 <br>
 <%= f.submit "Submit" %>
