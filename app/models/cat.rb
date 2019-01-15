@@ -8,4 +8,12 @@ class Cat < ApplicationRecord
     self.adopted == true
   end
 
+  def neutered?
+    if self.neutered == true
+      "Yes"
+    else
+      "No"
+    end
+  end
+
 end
