@@ -14,7 +14,7 @@
   <%@agency.cats.each do |cat|%>
     <ul>
       <%if cat.adopted? == false%>
-      <%=link_to cat.name, cat_path%>
+      <%=link_to cat.name, cat_path(cat)%>
       <%end%>
     </ul>
   <%end%>
@@ -24,4 +24,3 @@
 <%end%>
 <br>
 <br>
-<%= link_to 'All Agencies', agencies_path%>

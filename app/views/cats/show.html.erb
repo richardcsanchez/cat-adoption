@@ -7,8 +7,6 @@
 <h4>Cost to Adopt: $<%=@cat.cost%></h4>
 
 <br>
-<br>
-<%= link_to 'All Cats', cats_path%>
 
 <% if current_user.admin? %>
 <%= link_to "Edit Cat", edit_cat_path(@cat)%>
