@@ -2,7 +2,10 @@ class SessionsController < ApplicationController
   skip_before_action :require_logged_in, only: [:new, :create]
 
   def new
-    @user = User.find_by(params[:email])
+      @user = User.find_by(params[:email])
+    if @user == nil
+      redirect_to root_path
+  end
   end
 
   def create
