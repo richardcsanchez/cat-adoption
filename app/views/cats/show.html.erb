@@ -1,1 +1,11 @@
 <h1><%=@cat.name%></h1>
+<h4><%=@cat.agency.name%></h4>
+<h4><%=@cat.sex%></h4>
+<h4><%=@cat.age%> Years Old</h4>
+<h4>Cat-itude: <%=@cat.disposition%></h4>
+<h4>Spayed/Neutered? <%=@cat.neutered%></h4>
+<h4>Cost to Adopt: $<%=@cat.cost%></h4>
+
+<% if current_user.admin? %>
+<%= link_to "Edit Cat", edit_cat_path(@cat)%>
+<%end%>
