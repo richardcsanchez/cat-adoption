@@ -24,8 +24,8 @@ $<%= f.text_field :cost%><br>
 <%=f.label 'image', "Image Link"%>: <br>
 <%=f.text_field :image %> <br>
 <br>
-<%=f.label 'agency_id.name', "Adoption Agency"%>: <br>
-<%=f.text_field :agency_id %> <br>
+<%= f.label :agency_id, "Adoption Agency"%>: <br>
+<%= f.collection_select(:agency_id, Agency.all, :id, :name) %><br>
 <br>
 <%= f.submit "Submit" %>
 <%end%>
