@@ -10,7 +10,7 @@
 <%=f.text_field :age %> <br>
 <br>
 <%=f.label 'sex'%>: <br>
-<%=f.text_field :sex %> <br>
+<%= f.select :sex, [["Male", "Male"], ["Female", "Female"], ["Unknown", "Unknown"]], {}, {class: "form-control"} %><br>
 <br>
 <%= f.label :disposition %>:<br>
 <%= f.text_field :disposition%><br>
@@ -19,7 +19,7 @@
 $<%= f.text_field :cost%><br>
 <br>
 <%= f.label :neutered, "Spayed/Neutered?" %><br>
-<%= f.check_box :neutered%> <br>
+<%= f.check_box :neutered%> Yes <br>
 <br>
 <%=f.label 'image', "Image Link"%>: <br>
 <%=f.text_field :image %> <br>
