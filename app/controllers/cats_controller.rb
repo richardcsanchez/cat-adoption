@@ -1,8 +1,8 @@
 class CatsController < ApplicationController
 
   def index
-    if params[:agency_id]
-      @posts = agency.find(params[:agency_id]).cats
+    if @agency = Agency.find_by_id(params["agency_id"])
+      @cats = @agency.cats
     else
     @cats = Cat.all
   end
