@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   get "/signout", to: "sessions#destroy"
   post "/cats", to: "cats#create"
   delete "/cats", to: "cats#destroy"
-
+  get "/agency/:id/cats", to: "agencies#cats_by_agency"
   resources :cats
 
   resources :agencies do
-    resources :cats, only: [:show, :index]
+    resources :cats, only: [:show, :index, :cats_by_agency]
   end
 
   resources :users
