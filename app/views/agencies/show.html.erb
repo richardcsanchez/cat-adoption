@@ -9,13 +9,7 @@
   <%=@agency.state%>
   <%=@agency.zip_code%>
 </p>
-
-<h4>Cats at this Agency:
-  <%@agency.cats.each do |cat|%>
-    <ul>
-      <%=link_to cat.name, agency_cat_path(cat.agency, cat)%>
-    </ul>
-  <%end%>
+<%= link_to "Cats at this Agency", agency_cats_path(@agency.id)%>
 
 <%if current_user.admin?%>
 <%= link_to "Add Cat", new_cat_path%>
